@@ -168,14 +168,14 @@ class Agent {
 	 * @return	bool
 	 */
 	private static function _set_mobile() {
-		if (is_array(self::$robots) AND count(self::$robots) > 0)
+		if (is_array(self::$mobiles) AND count(self::$mobiles) > 0)
 		{
-			foreach (self::$robots as $key => $val)
+			foreach (self::$mobiles as $key => $val)
 			{
-				if (preg_match("|".preg_quote($key)."|i", self::$agent))
+				if (FALSE !== (strpos(strtolower(self::$agent), $key)))
 				{
-					self::$is_robot = TRUE;
-					self::$robot = $val;
+					self::$is_mobile = TRUE;
+					self::$mobile = $val;
 					return TRUE;
 				}
 			}
@@ -192,14 +192,14 @@ class Agent {
 	 * @return	bool
 	 */
 	private static function _set_robot() {
-		if (is_array(self::$mobiles) AND count(self::$mobiles) > 0)
+		if (is_array(self::$robots) AND count(self::$robots) > 0)
 		{
-			foreach (self::$mobiles as $key => $val)
+			foreach (self::$robots as $key => $val)
 			{
-				if (FALSE !== (strpos(strtolower(self::$agent), $key)))
+				if (preg_match("|".preg_quote($key)."|i", self::$agent))
 				{
-					self::$is_mobile = TRUE;
-					self::$mobile = $val;
+					self::$is_robot = TRUE;
+					self::$robot = $val;
 					return TRUE;
 				}
 			}
