@@ -47,12 +47,12 @@ echo Agent::platform(); // Platform info (Windows, Linux, Mac, etc.)
 ```
 #Method Refrence
 All methods in the Agent class are the same as the methods in the Codeigniter user agent library.
-You can read the documentation <http://codeigniter/user_guide>
+You can read the documentation <http://codeigniter.com/user_guide>
 
 Note all method calls are static
 Eg
 ``` 
-Agent::is_browser() 
+Agent::is_browser(); 
 ```
 
 
