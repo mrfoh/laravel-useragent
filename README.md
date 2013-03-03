@@ -9,7 +9,7 @@ Installation
 
 Install via artisan
 
-``` php artisan bundle:install laravel-useragent```
+``` php artisan bundle:install useragent ```
 
 Or clone the project into **bundles/useragent**
 
