@@ -2,7 +2,7 @@ laravel-useragent
 =================
 ### Version 1.0
 
-A port of the user agent library from Codeigniter to Laravel
+A port of the user agent library from Codeigniter to Laravel 3
 
 Installation
 ============
